@@ -1,0 +1,50 @@
+generated: '2026-09-06'
+method: probed
+source: >-
+  Live anonymous probes of every host this record knows: the registrable domain abtis.co.kr, its
+  www host, and the docs/marketing host (they are the same host — AbTis publishes no API, so there
+  is no baseURL host and no OpenAPI servers[] host to probe).
+note: >-
+  Every path probed returned a miss. abtis.co.kr answers an uncookied request on ANY path with a
+  ~780-byte JavaScript cookie challenge ("CUPID", an appliance in front of nginx) that carries HTTP
+  200; solving the challenge and re-requesting with the resulting cookie returns a genuine Apache
+  404 for every /.well-known/ path. www.abtis.co.kr is not a configured virtual host and answers
+  403 on every path. No document was served, so NO WellKnown or SecurityTxt pointer is emitted —
+  this file records a verified absence, not a presence.
+hosts:
+- host: abtis.co.kr
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: www.abtis.co.kr
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+  - path: /.well-known/agent-card.json
+    status: 403
+  - path: /.well-known/agent.json
+    status: 403

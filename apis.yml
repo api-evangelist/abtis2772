@@ -1,17 +1,47 @@
 aid: abtis2772
-name: Abtis2772
-description: 'Abtis2772 is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: AbTis
+description: >-
+  AbTis Co., Ltd. (앱티스) is a South Korean biotechnology company founded in 2016 and headquartered in
+  Yongin-si, Gyeonggi-do, inside the Dong-A Socio Holdings R&D Center. It develops AbClick, a
+  third-generation site-selective antibody conjugation platform that attaches payloads to the Fc
+  Lys248 residue of native IgG antibodies with no enzyme and no Fc engineering, giving a controlled
+  drug-to-antibody ratio and batch-to-batch consistency across ADC, DAC, AOC, ARC, ISAC and
+  dual-payload designs. AbTis licenses the platform, runs collaborative research and fee-for-service
+  ADC development, and advances its own pipeline led by AT-211, a Claudin 18.2-targeting MMAE ADC.
+  Acquired by Dong-A ST in 2023, it now operates as that company's ADC-specialised subsidiary. Its
+  product is licensed chemistry and drug intellectual property, not software: it runs no developer
+  program, public API, SDK or machine-readable contract.
 url: https://raw.githubusercontent.com/api-evangelist/abtis2772/refs/heads/main/apis.yml
+image: https://abtis.co.kr/assets/favicon/favicon-96x96.png
 x-type: company
 x-source: harvest:secondary-market
+x-harvest-source-url: https://equityzen.com/company/abtis2772/
 x-tier: stub
 x-tier-reason: harvest
+x-legal-name: AbTis Co., Ltd.
+x-parent-company: Dong-A ST
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: >-
+  AbTis licenses ADC linker chemistry and sells laboratory services; its only web property is a
+  gnuboard5 corporate marketing site at abtis.co.kr whose entire navigation is Company, Science,
+  Business and News. No developer portal, API reference, OpenAPI, GraphQL, AsyncAPI, MCP server or
+  agent card exists on any host it controls, no package named abtis is published to npm or PyPI, and
+  github.com/abtis is an unrelated individual account, not a company organization.
 specificationVersion: '0.20'
 created: '2026-09-06'
 modified: '2026-09-06'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Antibody-Drug Conjugates
+- Bioconjugation
+- Drug Discovery
+- Oncology
+- Life Sciences
+- Healthcare
+- South Korea
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +49,53 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/abtis2772-domain-security.yml
+- type: LLMsTxt
+  url: llms/abtis2772-llms.txt
 - type: Website
-  url: https://equityzen.com/company/abtis2772
+  url: https://abtis.co.kr/en/
+- type: SecondaryMarket
+  url: https://equityzen.com/company/abtis2772/
+- type: About
+  url: https://abtis.co.kr/en/company/overview.php
+- type: Contact
+  url: https://abtis.co.kr/en/company/contact.php
+- type: PressReleases
+  url: https://abtis.co.kr/en/pr-center/press-release.php
+x-enrichment:
+  date: '2026-09-06'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    AbTis sells ADC linker chemistry — AbClick platform licences, collaborative research and
+    fee-for-service conjugation work — so there is no software product to expose: its only web
+    property is a gnuboard5 corporate site whose entire navigation is Company, Science, Business and
+    News, and behind the site's CUPID JavaScript cookie challenge (which answers HTTP 200 with a
+    ~780-byte script on every path, then the real status on the cookied retry) /openapi.json,
+    /swagger.json, /api-docs, /graphql, /llms.txt, /robots.txt, /sitemap.xml and all eight
+    /.well-known/ paths return a genuine Apache 404.
+  evidence:
+  - url: https://abtis.co.kr/en/
+    status: 200
+  - url: https://abtis.co.kr/openapi.json
+    status: 404
+  - url: https://abtis.co.kr/swagger.json
+    status: 404
+  - url: https://abtis.co.kr/graphql
+    status: 404
+  - url: https://abtis.co.kr/.well-known/agent-card.json
+    status: 404
+  - url: https://abtis.co.kr/.well-known/api-catalog
+    status: 404
+  - url: https://abtis.co.kr/llms.txt
+    status: 404
+  - url: https://www.abtis.co.kr/openapi.json
+    status: 403
+  - url: https://registry.npmjs.org/-/v1/search?text=abtis
+    status: 200
+  checked: '2026-09-06'

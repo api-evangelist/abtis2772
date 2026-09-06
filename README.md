@@ -1,4 +1,4 @@
-# Abtis2772
+# AbTis
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,5 +64,11 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Abtis2772 is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/abtis2772
+AbTis Co., Ltd. is a South Korean biotechnology company (founded 2016, Yongin-si, Gyeonggi-do) that
+develops AbClick, a third-generation site-selective antibody conjugation platform for ADC, DAC, AOC,
+ARC and ISAC modalities, and has operated as Dong-A ST's ADC-specialized subsidiary since 2023. Its
+product is licensed chemistry and drug intellectual property, not software: it publishes no developer
+program, API, SDK or machine-readable contract, and this profile records that verified absence.
+
+- Website: https://abtis.co.kr/en/
+- Secondary-market listing (harvest source): https://equityzen.com/company/abtis2772/
